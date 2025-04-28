@@ -1,0 +1,24 @@
+$sm: 768px;
+$md: 1024px;
+$hd: 1280px;
+$lg: 1400px;
+$xlg: 1600px;
+$fhd: 1900px;
+
+:root {
+    --light: #f2f2f2;
+    --comfy-reading: #CCC;
+    --grey: #6F6F6F;
+    --black_1: #1F1F1F;
+    --black_2: #1C1C1C;
+    --black_3: #1A1A1A;
+    --primary: #00D7B0;
+    --primary-a: #00A894;
+    --f-warning: #c4334d;
+    --main_font_family: 'Geologica', Arial, sans-serif;
+    --shadow: 0 4px 4px 0 rgba(0,0,0, 0.04);
+    --section_vertical_gap: 40px;
+    @media(min-width: $hd) {
+        --section_vertical_gap: 80px;
+    }
+}

@@ -1,0 +1,199 @@
+.header {
+    left: 0;
+    height: 94px;
+    position: fixed;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 18px;
+    right: 0;
+    top: 0;
+    transition: all 0.3s;
+    z-index: 5;
+    @media(min-width: $hd) {
+        padding-top: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &.is-open {
+        background-color: #343434;
+        height: 100%;
+        padding-bottom: 24px;
+    }
+
+    &__container {
+        border-radius: 24px;
+        background-color: rgba(#1a1a1a, 0.9);
+        backdrop-filter: blur(8px);
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 76px;
+        padding: 14px 24px;
+        position: relative;
+        transition: height 0.3s;
+        @media(min-width: $hd) {
+            align-items: center;
+            flex-direction: row;
+            gap: 24px;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+    }
+
+    &__top {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        color: var(--light);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -0.5px;
+        z-index: auto;
+        @media(min-width: $sm) {
+            font-size: 24px;
+        }
+
+        a {
+            color: inherit;
+            display: block;
+            position: relative;
+            @include hover {
+                color: inherit;
+            }
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &__burger {
+        @include button-reset;
+        align-items: center;
+        border: 1px solid currentColor;
+        border-radius: 12px;
+        color: var(--primary-a);
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        width: 48px;
+        @media(min-width: $hd) {
+            display: none;
+        }
+
+        &.is-active {
+            color: var(--f-warning);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__button {
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.42857;
+        flex-shrink: 0;
+        height: 48px;
+        margin-bottom: 32px;
+        padding: 12px 24px;
+        @media(min-width: $hd) {
+            font-size: 14px;
+            font-weight: 200;
+            height: 36px;
+            margin-bottom: 0;
+            padding: 8px 16px;
+        }
+    }
+}
+
+.main-menu {
+    @media(max-width: $hd - 0.02px) {
+        align-items: center;
+        display: none;
+        flex-grow: 1;
+        flex-direction: column;
+        opacity: 0;
+        overflow-y: auto;
+        transition: opacity 0.3s;
+    }
+    @media(min-width: $hd) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        opacity: 1;
+        width: 100%;
+    }
+
+    &.is-open {
+        opacity: 1;
+    }
+
+    &__list {
+        @include list-reset;
+        font-size: 16px;
+        @media(min-width: $hd) {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media(max-width: $hd - 0.02px) {
+            font-weight: 400;
+            margin-top: auto;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item {}
+
+    &__link {
+        align-items: center;
+        color: var(--grey);
+        display: flex;
+        justify-content: center;
+        min-height: 48px;
+        transition: background-color 0.3s, color 0.3s;
+        @media(min-width: $hd) {
+            border-bottom: 4px solid transparent;
+            height: 76px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &:not(.is-active) {
+            @include hover {
+                color: var(--primary);
+            }
+        }
+
+        &.is-active {
+            color: var(--light);
+            @media(max-width: $hd - 0.02px) {
+                color: var(--primary);
+            }
+            @media(min-width: $hd) {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
+                border-bottom-color: var(--primary);
+            }
+        }
+    }
+
+    .socials {
+        flex-shrink: 0;
+        margin-top: auto;
+        margin-bottom: 10px;
+        @media(min-width: $hd) {
+            display: none;
+        }
+    }
+}

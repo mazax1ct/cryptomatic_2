@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CryptoMatic</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css" />
+</head>
+
+<body class="page">
+    //= template/header.html
+
+    //= template/sections/section_1.html
+
+    //= template/sections/section_2.html
+
+    //= template/sections/section_3.html
+
+    //= template/sections/section_4.html
+
+    //= template/sections/section_5.html
+
+    //= template/sections/section_6.html
+
+    //= template/float-block.html
+
+    //= template/footer.html
+
+    <div class="page__bg">
+        <div id="bg"></div>
+    </div>
+</body>
+
+//= template/scripts.html
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+<script>
+    VANTA.NET({
+        el: "#bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3fffa4,
+        backgroundColor: 0x1F1F1F
+    })
+</script>
+
+</html>

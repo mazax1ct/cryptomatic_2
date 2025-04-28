@@ -1,0 +1,57 @@
+.footer {
+    background-color: rgba(#1A1A1A, 0.5);
+    backdrop-filter: blur(8px);
+    color: var(--light);
+    font-weight: 200;
+    line-height: 1.53846;
+    position: relative;
+    z-index: 2;
+    @media(min-width: $md) {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: auto;
+    }
+
+    &__container {
+        padding: 24px;
+        text-align: center;
+        @media(min-width: $md) {
+            align-items: flex-end;
+            display: flex;
+            padding: 48px 56px;
+            text-align: left;
+        }
+    }
+
+    &__address {
+        margin-right: auto;
+        @media(min-width: $md) {
+            order: 1;
+        }
+        @media(max-width: $md - 0.02px) {
+            color: var(--grey);
+        }
+    }
+
+    &__contacts {
+        @media(min-width: $md) {
+            order: 2;
+            margin-right: 92px;
+        }
+    }
+
+    &__contacts,
+    &__links {
+        @media(max-width: $md - 0.02px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__links {
+        @media(min-width: $md) {
+            order: 3;
+        }
+    }
+}

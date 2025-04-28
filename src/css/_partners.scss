@@ -1,0 +1,54 @@
+.partners {
+    &__inner {
+        align-items: center;
+        background-color: var(--black_2);
+        border-radius: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+        @media(min-width: $sm) {
+            justify-content: space-between;
+        }
+    }
+
+    h2 {
+        color: var(--comfy-reading);
+        font-size: 15px;
+        font-weight: 200;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+.partner-link {
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--black_3);
+    display: flex;
+    justify-content: center;
+    min-height: 64px;
+    padding: 12px;
+    width: 210px;
+
+    &:not(:hover) {
+        svg {
+            fill: var(--light);
+
+            path {
+                fill: var(--light);
+            }
+        }
+    }
+
+    svg {
+        transition: fill 0.3s;
+
+        path {
+            transition: fill 0.3s;
+        }
+    }
+}

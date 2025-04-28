@@ -1,0 +1,215 @@
+.button {
+    align-items: center;
+    border: 1px solid transparent;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    z-index: auto;
+
+    svg {
+        height: 16px;
+        min-width: 16px;
+        transition: fill 0.3s;
+        width: 16px;
+    }
+
+    span,
+    svg {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        background-color: var(--background);
+        color: var(--grey);
+        cursor: default;
+        pointer-events: none;
+
+        &::after {
+            display: none;
+        }
+
+        svg {
+            fill: var(--grey);
+        }
+
+        &.button--bordered {
+            border-color: var(--grey);
+            background-color: transparent;
+            color: var(--grey);
+
+            svg {
+                fill: var(--grey);
+            }
+        }
+    }
+
+    &--red {
+        background-color: var(--f-warning);
+
+        svg {
+            fill: #fff;
+        }
+        @include hover {
+            color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--f-warning);
+            border-color: var(--f-warning);
+
+            svg {
+                fill: var(--f-warning);
+            }
+            @include hover {
+                background-color: var(--f-warning);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--green {
+        background-color: var(--primary-a);
+
+        svg {
+            fill: #fff;
+        }
+        @include hover {
+            color: #fff;
+        }
+
+        &.button--bordered {
+            color: var(--primary);
+            border-color: var(--primary-a);
+
+            svg {
+                fill: var(--primary);
+            }
+            @include hover {
+                background-color: var(--primary-a);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--bordered {
+        background-color: transparent;
+    }
+
+    &--h_32 {
+        border-radius: 8px;
+        font-size: 14px;
+        height: 32px;
+        padding: 4px 16px;
+
+        svg {
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+
+        &.button--square {
+            width: 32px;
+        }
+    }
+
+    &--h_36 {
+        border-radius: 8px;
+        font-size: 14px;
+        height: 36px;
+        padding: 4px 16px;
+
+        svg {
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+
+        &.button--square {
+            width: 36px;
+        }
+    }
+
+    &--h_40 {
+        border-radius: 10px;
+        height: 40px;
+        padding: 8px 24px;
+
+        &.button--square {
+            width: 40px;
+        }
+    }
+
+    &--h_48 {
+        border-radius: 12px;
+        font-size: 16px;
+        height: 48px;
+        padding: 12px 24px;
+
+        &.button--square {
+            width: 48px;
+        }
+    }
+
+    &--h_56 {
+        border-radius: 16px;
+        font-size: 20px;
+        height: 56px;
+        padding: 14px 48px;
+
+        svg {
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
+
+        &.button--square {
+            width: 56px;
+        }
+    }
+
+    &--green,
+    &--red {
+        position: relative;
+
+        &::after {
+            bottom: 0;
+            background-color: rgba(#000, 0.1);
+            content: '';
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+        @include hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
