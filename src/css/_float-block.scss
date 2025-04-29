@@ -12,7 +12,10 @@
     }
 
     &.jump {
-        bottom: 210px;
+        bottom: 150px;
+        @media(min-width: $fhd) {
+            bottom: 210px;
+        }
 
         &::after {
             opacity: 0;
