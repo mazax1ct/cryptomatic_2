@@ -39,7 +39,7 @@ html {
     }
 
     &__section {
-        min-height: 100dvh;
+        min-height: 100vh;
         overflow: hidden;
         padding: 120px 12px 12px;
         position: relative;
@@ -52,7 +52,7 @@ html {
 
     &__bg {
         left: 0;
-        height: 100dvh;
+        height: 100vh;
         overflow: hidden;
         position: fixed;
         top: 0;
