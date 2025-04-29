@@ -27,10 +27,11 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/plugins/jquery.fancybox.css" />
 </head>
 
 <body class="page">
-    <header class="header">
+    <header class="header compensate-for-scrollbar">
         <div class="header__container">
             <div class="header__top">
                 <a class="header__logo" href="#">
@@ -66,7 +67,7 @@
                     </li>
                 </ul>
     
-                <a class="header__button button button--green button--bordered" href="#"><span>Заявка / Вход</span></a>
+                <a class="header__button button button--green button--bordered" href="javascript:void(0)" data-fancybox="auth" data-src="#auth"><span>Заявка / Вход</span></a>
     
                 <div class="socials">
                     <a class="social-link" href="#" title="Наш Telegram" target="_blank" rel="nofollow noreferrer">
@@ -221,78 +222,122 @@
     </section>
 
     <section id="6" class="section-6 page__section">
-        <div class="container">
+        <div class="section-6__inner">
             <h2>Часто задаваемые <span class="color-green">вопросы</span></h2>
     
-            <div class="accordion">
-                <button class="accordion__toggler" type="button">
-                    <span>Что такое торговый бот?</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#chevron_down" />
-                    </svg>
-                </button>
-                <div class="accordion__body">
-                    <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
-                    <p>Для начало работы Вам нужно проанализировать текущую ситуацию на рынке, выбрать правильные настройки бота и запустить его.</p>
+            <div class="accordions">
+                <div class="accordion">
+                    <button class="accordion__toggler" type="button">
+                        <span>Что такое торговый бот?</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                    <div class="accordion__body">
+                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
+                        <p>Для начало работы Вам нужно проанализировать текущую ситуацию на рынке, выбрать правильные настройки бота и запустить его.</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <button class="accordion__toggler" type="button">
+                        <span>Как работают торговые боты?</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                    <div class="accordion__body">
+                        <p>Торговые боты используют различные индикаторы для анализа рыночных данных и автоматического совершения сделок. Логика, используемая торговым ботом, может варьироваться в зависимости от бота и торговой стратегии. CryptoMatic
+                            предлагает обучиться использовать торговых ботов для любых рыночных условий.</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <button class="accordion__toggler" type="button">
+                        <span>Выгодны ли боты для торговли криптовалютой?</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                    <div class="accordion__body">
+                        <p>
+                            Боты для торговли криптовалютами приносят ощутимую прибыль, если вы выберете правильную торговую стратегию и настроите своего бота с нужными параметрами. Для этого команда CryptoMatic подготовила образовательный курс, на
+                            котором
+                            Вы изучите тонкости настройки торговой стратегии и много другое.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <button class="accordion__toggler" type="button">
+                        <span>Опасна ли автоматическая торговля?</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                    <div class="accordion__body">
+                        <p>
+                            Автоматическая торговля, как и любая другая форма торговли, может быть рискованной. Риски использования торгового бота будут зависеть от уровня проведенного анализа и выбранных настроек. Таким образом, важно провести
+                            тщательное
+                            исследование, прежде чем использовать торгового бота.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <button class="accordion__toggler" type="button">
+                        <span>Сколько можно заработать пользуясь торговыми ботами?</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                    <div class="accordion__body">
+                        <p>Команда CryptoMatic имеет обширный теоретический и практический опыт в алготрейдинге, по этому сложно однозначно дать ответ о доходности. При этому можно ориентироваться на 15-20% от депозита.</p>
+                    </div>
                 </div>
             </div>
     
-            <div class="accordion">
-                <button class="accordion__toggler" type="button">
-                    <span>Как работают торговые боты?</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#chevron_down" />
-                    </svg>
-                </button>
-                <div class="accordion__body">
-                    <p>Торговые боты используют различные индикаторы для анализа рыночных данных и автоматического совершения сделок. Логика, используемая торговым ботом, может варьироваться в зависимости от бота и торговой стратегии. CryptoMatic
-                        предлагает обучиться использовать торговых ботов для любых рыночных условий.</p>
+            <div class="tabs">
+                <div class="tabs__left">
+                    <button class="tabs__button is-active" data-tab="1">Что такое торговый бот?</button>
+    
+                    <button class="tabs__button" data-tab="2">Как работают торговые боты?</button>
+    
+                    <button class="tabs__button" data-tab="3">Выгодны ли боты для торговли криптовалютой?</button>
+    
+                    <button class="tabs__button" data-tab="4">Опасна ли автоматическая торговля?</button>
+    
+                    <button class="tabs__button" data-tab="5">Сколько можно заработать, пользуясь торговыми ботами?</button>
+                </div>
+    
+                <div class="tabs__right">
+                    <div class="tab is-active" data-tab="1">
+                        <p>Торговый бот — это программа, используемая для автоматизации сделок и принятия решения о покупке или продаже на основе рыночных данных и заранее определенных правил.</p>
+                        <p>Для начало работы Вам нужно проанализировать текущую ситуацию на рынке, выбрать правильные настройки бота и запустить его.</p>
+                    </div>
+                    <div class="tab" data-tab="2">
+                        <p>Торговые боты используют различные индикаторы для анализа рыночных данных и автоматического совершения сделок. Логика, используемая торговым ботом, может варьироваться в зависимости от бота и торговой стратегии. CryptoMatic
+                            предлагает обучиться использовать торговых ботов для любых рыночных условий.</p>
+                    </div>
+                    <div class="tab" data-tab="3">
+                        <p>
+                            Боты для торговли криптовалютами приносят ощутимую прибыль, если вы выберете правильную торговую стратегию и настроите своего бота с нужными параметрами. Для этого команда CryptoMatic подготовила образовательный курс, на
+                            котором Вы изучите тонкости настройки торговой стратегии и много другое.
+                        </p>
+                    </div>
+                    <div class="tab" data-tab="4">
+                        <p>
+                            Автоматическая торговля, как и любая другая форма торговли, может быть рискованной. Риски использования торгового бота будут зависеть от уровня проведенного анализа и выбранных настроек. Таким образом, важно провести
+                            тщательное исследование, прежде чем использовать торгового бота.
+                        </p>
+                    </div>
+                    <div class="tab" data-tab="5">
+                        <p>Команда CryptoMatic имеет обширный теоретический и практический опыт в алготрейдинге, по этому сложно однозначно дать ответ о доходности. При этому можно ориентироваться на 15-20% от депозита.</p>
+                    </div>
                 </div>
             </div>
     
-            <div class="accordion">
-                <button class="accordion__toggler" type="button">
-                    <span>Выгодны ли боты для торговли криптовалютой?</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#chevron_down" />
-                    </svg>
-                </button>
-                <div class="accordion__body">
-                    <p>
-                        Боты для торговли криптовалютами приносят ощутимую прибыль, если вы выберете правильную торговую стратегию и настроите своего бота с нужными параметрами. Для этого команда CryptoMatic подготовила образовательный курс, на котором
-                        Вы изучите тонкости настройки торговой стратегии и много другое.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="accordion">
-                <button class="accordion__toggler" type="button">
-                    <span>Опасна ли автоматическая торговля?</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#chevron_down" />
-                    </svg>
-                </button>
-                <div class="accordion__body">
-                    <p>
-                        Автоматическая торговля, как и любая другая форма торговли, может быть рискованной. Риски использования торгового бота будут зависеть от уровня проведенного анализа и выбранных настроек. Таким образом, важно провести тщательное
-                        исследование, прежде чем использовать торгового бота.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="accordion">
-                <button class="accordion__toggler" type="button">
-                    <span>Сколько можно заработать пользуясь торговыми ботами?</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#chevron_down" />
-                    </svg>
-                </button>
-                <div class="accordion__body">
-                    <p>Команда CryptoMatic имеет обширный теоретический и практический опыт в алготрейдинге, по этому сложно однозначно дать ответ о доходности. При этому можно ориентироваться на 15-20% от депозита.</p>
-                </div>
-            </div>
-    
-            <p class="faq__note">Если у вас остались вопросы, <a href="mailto:texpomosh@one-shopw.com">напишите нам</a> и мы с радостью на них ответим. </p>
+            <p class="section-6__note">Если у вас остались вопросы, <a href="mailto:texpomosh@one-shopw.com">напишите нам</a> и мы с радостью на них ответим.</p>
         </div>
     </section>
 
@@ -335,6 +380,181 @@
         </div>
     </footer>
 
+    <div id="auth" class="popup box box--500">
+        <div class="box__title-block box__title-block--mb_40">
+            <p class="box__title">Авторизация</p>
+        </div>
+    
+        <form class="form" action="" autocomplete="off">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="login">Имя</label>
+                </div>
+                <div class="input">
+                    <input id="login" class="input__input" type="text" name="login" value="" placeholder="Имя" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="password">Пароль</label>
+                </div>
+                <div class="input">
+                    <input id="password" class="input__input" type="password" name="password" value="" placeholder="Пароль" autocomplete="off">
+                    <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#show_pass" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="form-field form-field--checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Запомнить меня</span>
+                </label>
+    
+                <a href="#">Забыли пароль?</a>
+            </div>
+    
+            <div class="form__bottom-block">
+                <div class="form__buttons form__buttons--center">
+                    <button class="button button--green button--h_48" type="submit"><span>Войти</span></button>
+                </div>
+            </div>
+    
+            <div class="form__bottom-link">
+                <a href="javascript:void(0)" data-fancybox="register" data-src="#register_">Регистрация</a>
+            </div>
+        </form>
+    </div>
+    
+    <div id="register" class="popup box box--500">
+        <div class="box__title-block box__title-block--mb_40">
+            <p class="box__title">Регистрация</p>
+        </div>
+    
+        <form class="form" action="" autocomplete="off">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="login">Имя</label>
+                </div>
+                <div class="input">
+                    <input id="login" class="input__input" type="text" name="login" value="" placeholder="Имя" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="email">Email</label>
+                </div>
+                <div class="input">
+                    <input id="email" class="input__input" type="text" name="email" value="" placeholder="Email" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="password_">Пароль</label>
+                </div>
+                <div class="input">
+                    <input id="password_" class="input__input" type="password" name="password_" value="" placeholder="Пароль" autocomplete="off">
+                    <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#show_pass" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="re_password">Подтвердите пароль</label>
+                </div>
+                <div class="input">
+                    <input id="re_password" class="input__input" type="password" name="re_password" value="" placeholder="Подтвердите пароль" autocomplete="off">
+                    <button class="js-toggle-password input__button" type="button" type="button" title="Показать символы">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#show_pass" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="form-field form-field--checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Я ознакомлен(а) и принимаю <a href="#">условия оферты</a></span>
+                </label>
+            </div>
+    
+            <div class="form__bottom-block">
+                <div class="form__buttons form__buttons--center">
+                    <button class="button button--green button--h_48" type="submit"><span>Войти</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="register_" class="popup box box--500">
+        <div class="box__title-block box__title-block--mb_40">
+            <p class="box__title">Заявка на регистрацию</p>
+        </div>
+    
+        <form class="form" action="" autocomplete="off">
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="login">Имя</label>
+                </div>
+                <div class="input">
+                    <input id="login" class="input__input" type="text" name="login" value="" placeholder="Имя" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="form-field">
+                <div class="form-field__title-block">
+                    <label class="form-field__title" for="email">Email</label>
+                </div>
+                <div class="input">
+                    <input id="email" class="input__input" type="text" name="email" value="" placeholder="Email" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="form-field form-field--checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Я ознакомлен(а) и принимаю <a href="#">условия оферты</a></span>
+                </label>
+            </div>
+    
+            <div class="form__bottom-block">
+                <div class="form__buttons form__buttons--center">
+                    <button class="button button--green button--h_48" type="submit" data-fancybox="success" data-src="#success"><span>Отправить заявку</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div id="success" class="popup box box--500">
+        <div class="box__title-block box__title-block--mb_40">
+            <p class="box__title">Успешно!</p>
+        </div>
+    
+        <p>Ваша заявка отправлена на рассмотрение, ожидайте ответа</p>
+    
+        <div class="form">
+            <div class="form__bottom-block">
+                <div class="form__buttons form__buttons--center">
+                    <button class="button button--green button--h_48 button--bordered" type="button"><span>Ок</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="page__bg">
         <div id="bg"></div>
     </div>
@@ -345,6 +565,9 @@
 <script src="js/ddscrollspy.js"></script>
 
 <script src="js/swiper-bundle.min.js"></script>
+
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-defaults.js"></script>
 
 <script src="js/main.js"></script>
 

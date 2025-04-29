@@ -50,8 +50,7 @@ if (!Array.prototype.filter){
 		var rangespan = range[1]-range[0], fieldspan = field[1]-field[0]
 		if ( (range[0]-field[0]) >= 0 && (range[0]-field[0]) < fieldspan ){ // if top of range is on field
 			return true
-		}
-		else{
+		}else{
 			if ( (range[0]-field[0]) <= 0 && (range[0]+rangespan) > field[0] ){ // if part of range overlaps field
 				return true
 			}
@@ -142,8 +141,10 @@ if (!Array.prototype.filter){
 				})
 				if (shortlist.length > 0){
 					curtarget = shortlist.shift() // select the first element that's visible on screen
-					if (prevtarget && prevtarget != curtarget)
+					if (prevtarget && prevtarget != curtarget) {
+            $('.float-block').removeClass('jump')
 						prevtarget.$menuitem.removeClass(o.highlightclass)
+          }
 					if (!curtarget.$menuitem.hasClass(o.highlightclass)) // if there was a previously selected menu link and it's not the same as current
 						curtarget.$menuitem.addClass(o.highlightclass) // highlight its menu item
 					if (curtarget.index >= cantscrollpastindex && scrolltop >= (spyscrollheight - spyheight)){ // if we're at target that can't be scrolled past and we're at end of document
@@ -154,6 +155,9 @@ if (!Array.prototype.filter){
 						}
 						curtarget.$menuitem.removeClass(o.highlightclass)
 						curtarget = targets[targets.length-1]
+            if(curtarget.index + 1 == targets.length){
+              $('.float-block').addClass('jump')
+            }
 						if (!curtarget.$menuitem.hasClass(o.highlightclass))
 							curtarget.$menuitem.addClass(o.highlightclass)
 						return
@@ -172,19 +176,13 @@ if (!Array.prototype.filter){
 					}
 				}
 				else if (scrolltop > totaltargetsheight){ // if no target content visible on screen but scroll bar has scrolled past very last content already
-					if (o.enableprogress){ // if o.enableprogress enabled
+          if (o.enableprogress){ // if o.enableprogress enabled
 						curtarget.$menuitem.removeClass(o.highlightclass)
 						for (var i=0; i<targets.length; i++){
 							targets[i].$menuitem.find('div.' + o.enableprogress).css('left', 0)
 						}
 					}
 				}
-
-        if(curtarget.index + 1 == targets.length){
-          $('.float-block').addClass('jump')
-        }else{
-          $('.float-block').removeClass('jump')
-        }
 			}
 
 			function updatetargetpos(){

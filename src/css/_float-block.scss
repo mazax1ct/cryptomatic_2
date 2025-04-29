@@ -1,5 +1,6 @@
 .float-block {
     bottom: 48px;
+    height: 0;
     left: 0;
     position: fixed;
     right: 0;
@@ -11,7 +12,7 @@
     }
 
     &.jump {
-        bottom: 178px;
+        bottom: 210px;
 
         &::after {
             opacity: 0;
@@ -19,6 +20,10 @@
     }
 
     &__inner {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        height: 0;
         padding-left: 56px;
         padding-right: 56px;
     }
@@ -35,7 +40,6 @@
         pointer-events: none;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: opacity 0.1s;
         user-select: none;
         width: 56px;
         z-index: 2;

@@ -64,3 +64,30 @@ $(document).on('click', '.accordion__toggler', function () {
   $(this).closest('.accordion').find('.accordion__body').slideToggle();
   return false;
 });
+
+//табы faq
+$(document).on('click', '.tabs__button', function () {
+  $(this).closest('.tabs').find('.tabs__button').removeClass('is-active');
+  $(this).addClass('is-active');
+
+  $(this).closest('.tabs').find('.tab').removeClass('is-active');
+  $(this).closest('.tabs').find('.tab[data-tab="'+$(this).attr('data-tab')+'"]').addClass('is-active');
+  return false;
+});
+
+//тогглер пароля
+$(document).on('click', '.js-toggle-password', function () {
+  if($(this).hasClass('is-toggled')) {
+    $(this).closest('.input').find('input').attr('type', 'password');
+    $(this).removeClass('is-toggled');
+    $(this).attr('title', 'Показать символы');
+    $(this).find('use').attr('xlink:href', 'images/sprite.svg#show_pass');
+  } else {
+    $(this).closest('.input').find('input').attr('type', 'text');
+    $(this).addClass('is-toggled');
+    $(this).attr('title', 'Скрыть символы');
+    $(this).find('use').attr('xlink:href', 'images/sprite.svg#hide_pass');
+  }
+
+  return false;
+});

@@ -1,0 +1,115 @@
+.section-6 {
+    display: flex;
+    @media(min-width: $md) {
+        padding-bottom: 120px;
+    }
+    @media(min-width: $fhd) {
+        padding-bottom: 180px;
+    }
+
+    &__inner {
+        margin: auto;
+        max-width: 1560px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0 0 48px;
+        text-align: center;
+        @media(min-width: $md) {
+            margin-bottom: 16px;
+        }
+        @media(min-width: $hd) {
+            font-size: 32px;
+            line-height: 1.25;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__note {
+        margin-bottom: 0;
+        margin-top: 48px;
+        text-align: center;
+        @media(min-width: $md) {
+            margin-top: 16px;
+        }
+        @media(min-width: $fhd) {
+            margin-top: 32px;
+        }
+    }
+
+    .accordions {
+        @media(min-width: $md) {
+            display: none;
+        }
+    }
+
+    .tabs {
+        @media(max-width: $md - 0.02px) {
+            display: none;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    gap: 24px;
+
+    &__left,
+    &__right {
+        width: calc(100% / 2 - 24px / 2);
+    }
+
+    &__button {
+        @include button-reset;
+        align-items: center;
+        background-color: rgba(#1a1a1a, 0.8);
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        color: #888;
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        justify-content: space-between;
+        gap: 24px;
+        line-height: 1.5;
+        min-height: 64px;
+        padding: 20px;
+        text-align: left;
+        transition: border-radius 0.3s, color 0.3s, background-color 0.3s;
+        width: 100%;
+        @media(min-width: $fhd) {
+            min-height: 72px;
+            padding: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &.is-active {
+            background-color: rgba(#1a1a1a, 0.33);
+            color: var(--light);
+        }
+    }
+
+    &__right {
+        background-color: rgba(#1a1a1a, 0.8);
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        padding: 40px;
+    }
+
+    .tab {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}

@@ -18,6 +18,7 @@ $fhd: 1900px;
     --main_font_family: 'Geologica', Arial, sans-serif;
     --shadow: 0 4px 4px 0 rgba(0,0,0, 0.04);
     --section_vertical_gap: 40px;
+    --underlay: #272727;
     @media(min-width: $hd) {
         --section_vertical_gap: 80px;
     }

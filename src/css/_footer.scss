@@ -20,8 +20,12 @@
         @media(min-width: $md) {
             align-items: flex-end;
             display: flex;
-            padding: 48px 56px;
+            padding: 24px 56px;
             text-align: left;
+        }
+        @media(min-width: $fhd) {
+            padding-top: 48px;
+            padding-bottom: 48px;
         }
     }
 

@@ -3,13 +3,19 @@
 
     &:not(:last-child) {
         margin-bottom: 12px;
+        @media(min-width: $md) and (max-width: $fhd - 0.02px) {
+            margin-bottom: 8px;
+        }
     }
 
     &.is-open {
         .accordion__toggler {
             border-radius: 24px 24px 0 0;
+            background-color: rgba(#1a1a1a, 0.2);
+            color: var(--light);
 
             svg {
+                fill: var(--light);
                 transform: rotate(-180deg);
             }
         }
@@ -18,19 +24,20 @@
     &__toggler {
         @include button-reset;
         align-items: center;
-        background-color: var(--black_2);
+        background-color: rgba(#1a1a1a, 0.8);
+        backdrop-filter: blur(8px);
         border-radius: 24px;
-        color: var(--light);
+        color: #888;
         display: flex;
         font-size: 16px;
         font-weight: 400;
         justify-content: space-between;
         gap: 24px;
         line-height: 1.5;
-        min-height: 72px;
-        padding: 24px;
+        min-height: 64px;
+        padding: 20px;
         text-align: left;
-        transition: border-radius 0.3s;
+        transition: border-radius 0.3s, color 0.3s, background-color 0.3s;
         width: 100%;
         @media(min-width: $sm) {
             padding-left: 32px;
@@ -38,19 +45,20 @@
         }
 
         svg {
-            fill: var(--light);
-            height: 20px;
-            min-width: 20px;
-            width: 20px;
+            fill: #888;
+            height: 24px;
+            min-width: 24px;
+            transition: fill 0.3s;
+            width: 24px;
         }
     }
 
     &__body {
-        background-color: var(--black_3);
-        border-radius: 0 0 24px 24px;
-        color: var(--comfy-reading);
+        background-color: rgba(#1a1a1a, 0.33);
+        backdrop-filter: blur(8px);
+        color: var(--light);
         display: none;
-        padding: 24px;
+        padding: 20px;
         @media(min-width: $sm) {
             padding-left: 32px;
             padding-right: 32px;

@@ -1,0 +1,32 @@
+.popup {
+    display: none;
+
+    &__closer {
+        &.fancybox-button {
+            @include button-reset;
+            align-items: center;
+            display: flex;
+            height: 48px;
+            justify-content: center;
+            right: 0;
+            top: 16px;
+            width: 48px;
+            @include hover {
+                svg {
+                    fill: var(--primary-a);
+                }
+            }
+            @media(min-width: $sm) {
+                right: 24px;
+                top: 32px;
+            }
+
+            svg {
+                fill: var(--primary);
+                height: 24px;
+                transition: fill 0.3s;
+                width: 24px;
+            }
+        }
+    }
+}
